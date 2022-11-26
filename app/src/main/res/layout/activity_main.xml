@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity" android:soundEffectsEnabled="false" android:scrollbars="vertical"
+        android:scrollbarTrackHorizontal="@android:drawable/btn_star"
+        android:scrollbarTrackVertical="@android:drawable/btn_star_big_on"
+        android:background="#69F0AE" android:id="@+id/constraintlayout">
+    <Button
+            android:text="Bluetooth Off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/BluetoothOff"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.896" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.863"/>
+    <Button
+            android:text=" Bluetooth On"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/BluetoothOn"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.896" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.057"/>
+    <Button
+            android:text=" Show Devices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/ShowDevices"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.073" app:layout_constraintEnd_toEndOf="parent"
+    />
+    <ListView
+            android:layout_width="385dp"
+            android:layout_height="216dp"
+            app:layout_constraintStart_toStartOf="parent" android:id="@+id/deviceListLayout"
+            android:background="#E8FF81"
+            android:cacheColorHint="@android:color/secondary_text_light" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.19" app:layout_constraintEnd_toEndOf="parent"/>
+    <Button
+            android:text="Send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/send"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/BluetoothOn"
+            app:layout_constraintTop_toBottomOf="@+id/deviceListLayout" app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintVertical_bias="0.924"/>
+    <TextView
+            android:layout_width="247dp"
+            android:layout_height="40dp" android:id="@+id/msg_box"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ShowDevices"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.442" android:background="#1FBCE3" android:textColor="#000000"
+            android:gravity="center" app:layout_constraintEnd_toEndOf="parent"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            android:id="@+id/writeMsg"
+            app:layout_constraintEnd_toStartOf="@+id/send" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@+id/msg_box"
+            app:layout_constraintHorizontal_bias="0.595" app:layout_constraintVertical_bias="0.506"/>
+    <TextView
+            android:text="Device Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/DeviceNameTxtView"
+            app:layout_constraintTop_toBottomOf="@+id/deviceListLayout"
+            app:layout_constraintBottom_toTopOf="@+id/msg_box" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+            android:layout_width="207dp"
+            android:layout_height="29dp"
+            android:layout_marginBottom="60dp"
+            app:layout_constraintBottom_toTopOf="@+id/deviceListLayout" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/StatusTxtView" android:text="Welcome To Sung Ha's App"
+            android:gravity="center_horizontal|center_vertical"/>
+
+    <Button
+            android:text="Connect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/btnConnect"
+            app:layout_constraintTop_toBottomOf="@+id/msg_box"
+            app:layout_constraintBottom_toTopOf="@+id/writeMsg" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintVertical_bias="0.083"/>
+    <TextView
+            android:text="Chat Here"
+            android:layout_width="319dp"
+            android:layout_height="40dp" android:id="@+id/ChatBox"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnConnect" app:layout_constraintBottom_toTopOf="@+id/writeMsg"/>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            tools:context=".MainActivity" android:orientation="vertical">
+
+        <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
