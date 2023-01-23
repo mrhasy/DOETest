@@ -1,2 +1,3 @@
 rootProject.name='DOETest'
 include ':app'
+include ':app'
